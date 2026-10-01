@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad, Actions } from './$types';
 
 export const load: PageServerLoad = async ({ locals, fetch, cookies }) => {
   if (!locals.token) redirect(303, '/login');
@@ -15,4 +15,11 @@ export const load: PageServerLoad = async ({ locals, fetch, cookies }) => {
   }
 
   return { user: await res.json() };
+};
+
+export const actions: Actions = {
+  logout: async ({ cookies }) => {
+    cookies.delete('token', { path: '/' });
+    redirect(303, '/login');
+  }
 };
