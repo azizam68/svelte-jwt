@@ -1,42 +1,29 @@
-# sv
+# 🔐 Svelte JWT
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+JWT authentication demo built with SvelteKit.
 
-## Creating a project
+🔗 **Live demo**: https://ton-url.vercel.app
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🚧 Status
 
-```sh
-# create a new project
-npx sv create my-app
-```
+Setup deployed on Vercel. JWT auth coming next.
 
-To recreate this project with the same configuration:
+## 🛠️ Stack
 
-```sh
-# recreate this project
-npx sv@0.17.1 create --template minimal --types ts --add eslint prettier --install npm svelte-jwt
-```
+- SvelteKit 2 + Svelte 5
+- TypeScript
+- Vite 8
+- Vercel (`adapter-vercel`, `nodejs22.x`)
 
-## Developing
+## 🚀 Run locally
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+\`\`\`bash
+git clone https://github.com/TON_USERNAME/svelte-jwt.git
+cd svelte-jwt
+npm install
 npm run dev
+\`\`\`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 📄 License
 
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+MIT
